@@ -32,7 +32,7 @@ simplified.out: simbox_simplified.cpp simbox.h main.cpp
 
 
 
-.PHONY: clean exec ubsan sim
+.PHONY: clean exec ubsan simplified
 .DEFAULT_GOAL := exec
 
   
