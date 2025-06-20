@@ -1,5 +1,5 @@
 CXX = clang++
-SRC = ball.cpp simbox.cpp main.cpp # List only the source files (not headers)
+SRC = simbox.cpp main.cpp # List only the source files (not headers)
 HEADERS = $(wildcard *.h) # List all header files in the current directory
 CXX_FLAGS = -std=c++20 -gdwarf-4 -fstandalone-debug -O0 -Wall -Wextra -Werror 
 
@@ -21,11 +21,14 @@ new: new.out
 
 # This passes only the source files ($(SRC)) to the compiler. 
 # You don’t include header files in the compilation command because they are included by the source files as needed.
-main.out: $(SRC) $(HEADERS)
-	$(CXX) $(CXX_FLAGS) $(SRC) -o $@  
+# main.out: $(SRC) $(HEADERS)
+# 	$(CXX) $(CXX_FLAGS) $(SRC) -o $@  
 
-new.out: simbox2.cpp simbox2.h main.cpp
-	$(CXX) $(CXX_FLAGS) simbox2.cpp main.cpp -o $@
+main.out: simbox.cpp simbox.h main.cpp
+	$(CXX) $(CXX_FLAGS) $(SRC) -o $@
+
+new.out: simbox_simplified.cpp simbox.h main.cpp
+	$(CXX) $(CXX_FLAGS) simbox_simplified.cpp main.cpp -o $@
 
 
 
