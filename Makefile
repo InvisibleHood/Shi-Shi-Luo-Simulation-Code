@@ -27,7 +27,7 @@ simplified: simplified.out
 main.out: simbox.cpp simbox.h main.cpp
 	$(CXX) $(CXX_FLAGS) $(SRC) -o $@
 
-new.out: simbox_simplified.cpp simbox.h main.cpp
+simplified.out: simbox_simplified.cpp simbox.h main.cpp
 	$(CXX) $(CXX_FLAGS) simbox_simplified.cpp main.cpp -o $@
 
 
