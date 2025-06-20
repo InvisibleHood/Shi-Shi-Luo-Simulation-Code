@@ -14,5 +14,5 @@ This project simulates the Shishi Luo's algorithm introduced in her paper "A uni
 make
 ./main.out
 
-make new
-./new.out
+make simplified
+./simplified.out

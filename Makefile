@@ -15,8 +15,8 @@ ubsan: $(SRC)
 	$(CXX) $(CXX_FLAGS) $(UBSAN_FLAGS) $^ -o main.out
 	./main.out
 
-new: new.out
-	./new.out
+simplified: simplified.out
+	./simplified.out
 
 
 # This passes only the source files ($(SRC)) to the compiler. 
