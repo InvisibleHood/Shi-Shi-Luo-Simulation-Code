@@ -2,9 +2,6 @@ import random
 import numpy as np
 import time
 
-fw_file = "simulation_results_2_strategies_donation_game.txt"
-
-
 def assign_initial_strategies(m, n):  
     groups = [random.randint(0, n) for _ in range(m)]
     urns = [0] * (n + 1)
