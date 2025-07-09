@@ -24,13 +24,13 @@ class Simbox {
         int draw_random_urn(const std::vector<double>& urns, double totalRate);
         std::vector<double> GetTotalDestinationRates(int LeavingUrnIdx);
 
-        int m = 25;  //total numbers of balls
-        int n = 49;  //individuals' number in ball is n = 20
+        int m = 50;  //total numbers of balls
+        int n = 50;  //individuals' number in ball is n = 20
 
         std::vector<int> urns;   //the index represents the cooperator numbers in the ball
 
         float s = 0.5; //replication rate difference between cooperators and defectors
         float r = 0.5; //selection coefficient at the group level 
-        float w = 1; //ratio of the rate of group-level events to the rate of individual-level events.
+        float w = 10; //ratio of the rate of group-level events to the rate of individual-level events.
         double time = 0;
 };
